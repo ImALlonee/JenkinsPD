@@ -14,56 +14,56 @@ pipeline {
         stage('deploy-to-dev') {
             steps {
                 script{
-                    deploy("DEV", 7001)
+                    deploy("dev", 7001)
                 }
             }
         }
         stage('tests-on-dev') {
             steps {
                 script{
-                    test("DEV")
+                    test("dev")
                 }
             }
         }
         stage('deploy-to-staging') {
             steps {
                 script{
-                    deploy("STG", 7002)
+                    deploy("staging", 7002)
                 }
             }
         }
         stage('tests-on-staging') {
             steps {
                 script{
-                    test("STG")
+                    test("staging")
                 }
             }
         }
         stage('deploy-to-preprod') {
             steps {
                 script{
-                    deploy("PREPRD", 7003)
+                    deploy("preprod", 7003)
                 }
             }
         }
         stage('tests-on-preprod') {
             steps {
                 script{
-                    test("PREPRD")
+                    test("preprod")
                 }
             }
         }
         stage('deploy-to-prod') {
             steps {
                 script{
-                    deploy("PRD", 7004)
+                    deploy("prod", 7004)
                 }
             }
         }
         stage('tests-on-prod') {
             steps {
                 script{
-                    test("PRD")
+                    test("prod")
                 }
             }
         }
